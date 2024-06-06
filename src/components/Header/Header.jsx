@@ -2,6 +2,7 @@ import Link from "next/link";
 import MenuItem from "./MenuItem";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import ThemeMode from "./ThemeMode";
 
 export default function Header() {
   return (
@@ -11,13 +12,16 @@ export default function Header() {
         <MenuItem title="about" address="/about" Icon={BsFillInfoCircleFill} />
       </div>
       <div className="flex items-center space-x-4">
-        <Link href={"/"}>
-          <h2>
-            <span className="text-2xl bg-cyan-500 px-2 py-1 rounded-lg text-white font-bold mr-1">
-              MoView
-            </span>
-          </h2>
-        </Link>
+        <ThemeMode />
+        <div className="flex items-center space-x-4">
+          <Link href={"/"}>
+            <h2>
+              <span className="text-2xl bg-cyan-500 px-2 py-1 rounded-lg text-white font-bold mr-1">
+                MoView
+              </span>
+            </h2>
+          </Link>
+        </div>
       </div>
     </div>
   );
